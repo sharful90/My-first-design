@@ -79,14 +79,7 @@
 }
 /*header content close*/
 /*section content*/
- #service_section{
-     background-image:url("img/masum.jpg");
-     background-repeat:no-repeat;
-     background-size:cover;
-     width:100%;
-     height: 625px;
-     overflow: hidden;
-}
+ 
  #about_section{
      background-image:url("img/download.jfif");
      background-repeat:no-repeat;
@@ -94,6 +87,11 @@
      width:100%;
      height:530px;
      overflow: hidden;
+}
+.about_sec_wrap{
+	width:1170px;
+	height:100%;
+	margin:auto;
 }
  .left_image img {
     width: 300px;
@@ -130,6 +128,20 @@
  #span_tag4{
      color:#a4d348;
 }
+
+#service_section{
+     background-image:url("img/masum.jpg");
+     background-repeat:no-repeat;
+     background-size:cover;
+     width:100%;
+     height: 625px;
+     overflow: hidden;
+}
+.service_section_wrap{
+    width:1170px;
+	height:100%;
+	margin:auto;
+}
  .section_title1 {
      text-align: center;
      font-family: arial black;
@@ -146,11 +158,16 @@
      animation-name:textstyle;
      animation-duration:1s;
 }
+.all_content_wrap{
+	width:1030px;
+	margin: auto;
+	
+}
  .all_content{
-     margin-left: 97px;
      padding-bottom: 166px;
      font-family:arial;
      padding-top: 30px;
+	 margin:auto;
 }
  .main_block {
      width:300px;
@@ -239,6 +256,7 @@
 	overflow:hidden;
 
 }
+
 .Skills{
 	width:100%;
 	max-width: 700px;
@@ -337,6 +355,11 @@ footer#footer_content {
     padding: 30px 30px 15px 30px;
     overflow: hidden;
     width: 100%;
+}
+.footer_wrap{
+	width:1170px;
+	margin:auto;
+    overflow: hidden;
 }
  .footer_container{
      width: 238px;
