@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+   	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">				
+		<title>Freelancer Masum Website</title>
+		<meta name="description" content="A perspective slideshow based on Franklin Ta's CSS matrix3d transforms" />
+		<meta name="keywords" content="perspective, mockup, slideshow, transform, 3d, matrix, css" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/mockup4.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="js/modernizr.custom.js"></script>
+        <script src="https://kit.fontawesome.com/85a5890bd2.js"></script>
+    
+</head>
+<body class="demo-4">
+    <!--header content-->
+    <header>
+        <nav class="main_nav">
+
+            <div class="logo_image"><img src="img/coollogo_com-28249266.png" alt="text_logo" /></div>
+            <menu class="menu_container">
+                <ul class="primary_menu">
+                    <li><a href="">HOME</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">WEB DESIGN</a></li>
+                            <li><a href="#">WEB DEVELOPMENT</a></li>
+                            <li><a href="#">WORDPRESS</a></li>
+                            <li><a href="#">WORDPRESS THEME CUSTOMIZATION</a></li>
+                            <li><a href="#">GRAPHIC DESIGN</a></li>
+                            <li><a href="#">PHOTOSHOP CC</a></li>
+                            <li><a href="#">ILLUSTRATOR CC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">ABOUT</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">WEB DESIGN</a></li>
+                            <li><a href="#">WEB DEVELOPMENT</a></li>
+                            <li><a href="#">WORDPRESS</a></li>
+                            <li><a href="#">WORDPRESS THEME CUSTOMIZATION</a></li>
+                            <li><a href="#">GRAPHIC DESIGN</a></li>
+                            <li><a href="#">PHOTOSHOP CC</a></li>
+                            <li><a href="#">ILLUSTRATOR CC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">SERVICE</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">WEB DESIGN</a></li>
+                            <li><a href="#">WEB DEVELOPMENT</a></li>
+                            <li><a href="#">WORDPRESS</a></li>
+                            <li><a href="#">WORDPRESS THEME CUSTOMIZATION</a></li>
+                            <li><a href="#">GRAPHIC DESIGN</a></li>
+                            <li><a href="#">PHOTOSHOP CC</a></li>
+                            <li><a href="#">ILLUSTRATOR CC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">SOCIAL</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">WEB DESIGN</a></li>
+                            <li><a href="#">WEB DEVELOPMENT</a></li>
+                            <li><a href="#">WORDPRESS</a></li>
+                            <li><a href="#">WORDPRESS THEME CUSTOMIZATION</a></li>
+                            <li><a href="#">GRAPHIC DESIGN</a></li>
+                            <li><a href="#">PHOTOSHOP CC</a></li>
+                            <li><a href="#">ILLUSTRATOR CC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">CONTACT</a></li>
+                    <li><a id="login_button" href="">LOGIN</a></li>
+                    <li><a id="signup_button" href="">SIGN UP</a></li>
+                </ul>
+            </menu>
+        </nav>
+    </header>
+    <!--header content close-->
+	<!--slider content-->
+	<div class="container">
+			<div id="wrap" class="wrap">
+				<div class="mockup">
+					<img class="mockup__img" src="img/mockup4.jpg" />
+					<div class="mobile">
+						<ul id="slideshow-1" class="slideshow">
+							<li class="slideshow__item"><img src="img/small/1.png"/></li>
+							<li class="slideshow__item"><img src="img/small/2.png"/></li>
+							<li class="slideshow__item"><img src="img/small/3.png"/></li>
+							<li class="slideshow__item"><img src="img/small/4.png"/></li>
+						</ul>
+					</div>
+					<div class="screen">
+						<ul id="slideshow-2" class="slideshow">
+							<li class="slideshow__item current"><img src="img/large/1.png"/></li>
+							<li class="slideshow__item"><img src="img/large/2.png"/></li>
+							<li class="slideshow__item"><img src="img/large/3.png"/></li>
+							<li class="slideshow__item"><img src="img/large/4.png"/></li>
+						</ul>
+					</div>
+					<header class="codrops-header">
+						<h1><span>Freelancer Masum</span>Web Developer<i>I am a professional web developer <a href="https://www.w3schools.com/">and graphic designer</a></i></h1>
+					</header>
+				</div>
+			</div>
+			
+
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+			(function() {
+				new Slideshow( document.getElementById( 'slideshow-1' ) );
+				setTimeout( function() {
+					new Slideshow( document.getElementById( 'slideshow-2' ) );
+				}, 1750 );
+
+				/* Mockup responsiveness */
+				var body = docElem = window.document.documentElement,
+					wrap = document.getElementById( 'wrap' ),
+					mockup = wrap.querySelector( '.mockup' ),
+					mockupWidth = mockup.offsetWidth;
+
+				scaleMockup();
+
+				function scaleMockup() {
+					var wrapWidth = wrap.offsetWidth,
+						val = wrapWidth / mockupWidth;
+
+					mockup.style.transform = 'scale3d(' + val + ', ' + val + ', 1)';
+				}
+				
+				window.addEventListener( 'resize', resizeHandler );
+
+				function resizeHandler() {
+					function delayed() {
+						resize();
+						resizeTimeout = null;
+					}
+					if ( typeof resizeTimeout != 'undefined' ) {
+						clearTimeout( resizeTimeout );
+					}
+					resizeTimeout = setTimeout( delayed, 50 );
+				}
+
+				function resize() {
+					scaleMockup();
+				}
+			})();
+		</script>
+	<!--slider content close-->
+    <!--section content-->
+    </section>
+    <!--This is about section-->
+    <section id="about_section">
+        <div class="section_title2">
+            <h1 id="hading1"><span id="span_tag3">ABOUT</span> <span id="span_tag4">THIS BLOG</span></h1>
+        </div>
+        <hr />
+        <div class="left_image">
+            <a href="https://www.facebook.com/sa.masumislam"><img title="click here to visit my facebook profile" src="img/masum pic.jpg" alt="Freelancer Masum Pic" /></a>
+
+        </div>
+        <div class="about_content">
+            <p>Thanks for visiting my webste.I am Freelancer Masum.I am a Full Stack Web Developer Graphic Designer and Youtube Content Creator. This Is My Freelancing Tips And Tricks Related Website. Currently i am trying to make Some best freelancer to this website.I have good experience in Web Design and Graphic Design.
+            </p>
+            <p>My web Design & Development Skills :- html/css/javascript/Jquery/Bootstrap/Php/Wordpress/ Etc.</p>
+            <p>My Graphic design Skills in the following areas:- Logo Design/Banner Design/Business Card Design/Flyer Design/Web Template Design/etc. </p>
+            <p>I have best experience in Photoshop cc & Illustrator cc .</p>
+        </div>
+
+    </section>
+    <!--about section close-->
+	<!--My Skills Animation-->
+<section class="my_skills">
+   <div class="background">
+    <div class="Skills">
+        <h2>My Skills</h2>
+		
+        <li>
+            <h3>HTML5</h3><h3 id="right">95%</h3><span class="bar"><span class="html"></span></span>
+        </li>
+        <li>
+            <h3>CSS3</h3><h3 id="right">85%</h3><span class="bar"><span class="css"></span></span>
+        </li>
+        <li>
+            <h3>JAVASCRIPT</h3><h3 id="right">70%</h3><span class="bar"><span class="javascript"></span></span>
+        </li>
+        <li>
+            <h3>JQUERY</h3><h3 id="right">75%</h3><span class="bar"><span class="jquery"></span></span>
+        </li>
+        <li>
+            <h3>BOOTSTRAP</h3><h3 id="right">80%</h3><span class="bar"><span class="bootstrap"></span></span>
+        </li>
+        <li>
+            <h3>PHP</h3><h3 id="right">85%</h3><span class="bar"><span class="php"></span></span>
+        </li>
+        <li>
+            <h3>WORDPRESS</h3><h3 id="right">95%</h3><span class="bar"><span class="wordpress"></span></span>
+        </li>
+    </div>
+  </div>
+</section>
+    <!--My Skills Animation close-->
+    <!--This is service section-->
+    <section id="service_section">
+        <div class="section_title1">
+            <h1 id="hading1"><span id="span_tag1">OUR</span> <span id="span_tag2">SERVICE</span></h1>
+        </div>
+        <div class="all_content">
+            <!--1st block-->
+			<div id="main_block">
+            <div class="main_block">
+                <div class="lefticon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="rightcontent">
+                    <h3>Web Design</h3>
+                    <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. </p>
+                </div>
+            </div>
+           </div>
+            <!--2nd block-->
+			<div id="main_block">
+            <div class="main_block">
+                <div class="lefticon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="rightcontent">
+                    <h3>Web Design</h3>
+                    <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. </p>
+                </div>
+            </div>
+           </div>
+            <!--3rd block-->
+			<div id="main_block">
+            <div class="main_block">
+                <div class="lefticon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="rightcontent">
+                    <h3>Web Design</h3>
+                    <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. </p>
+                </div>
+            </div>
+           </div>
+        </div>
+
+        <div class="all_content">
+            <!--1st block-->
+			<div id="main_block">		
+            <div class="main_block">
+                <div class="lefticon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="rightcontent">
+                    <h3>Web Design</h3>
+                    <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. </p>
+                </div>
+            </div>
+            </div>
+            <!--2nd block-->
+			<div id="main_block">
+            <div class="main_block">
+                <div class="lefticon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="rightcontent">
+                    <h3>Web Design</h3>
+                    <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. </p>
+                </div>
+            </div>
+            </div>
+            <!--3rd block-->
+			<div id="main_block">
+            <div class="main_block">
+                <div class="lefticon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="rightcontent">
+                    <h3>Web Design</h3>
+                    <p>Web design encompasses many different skills and disciplines in the production and maintenance of websites. </p>
+                </div>
+            </div>
+           </div>
+		</div>
+    </section>
+    <!--service section close-->
+    <!--section content close-->
+	
+	<!--footer_content-->
+    <footer id="footer_content">
+	    <!--footer_container-->
+        <div class="footer_container">
+            <h2>About Us</h2>
+            <p>FreelancerMasum.Com is now a Tips And Tricks Related website. You can got here to Computer,android,facebook, Youtube,photoshop,video editing tips etc.</p>
+        </div>
+		<!--footer_container close-->
+		
+		<!--footer_container2-->
+        <div class="footer_container2">
+            <h2>Additional Links</h2>
+            <p><a target="blank" href="https://www.google.com/">Google</a></p>
+            <p><a target="blank" href="https://www.Facebook.com">Facebook</a></p>
+            <p><a target="blank" href="https://www.youtube.com">Youtube</a></p>
+            <p><a target="blank" href="https://www.w3schools.com">W3 Schools</a></p>
+        </div>
+		<!--footer_container2 close-->
+		
+		<!--footer_container3-->
+        <div class="footer_container3">
+            <h2>Custom Menu</h2>
+            <p><a target="blank" href="#">Home</a></p>
+            <p><a target="blank" href="#">Pages</a></p>
+            <p><a target="blank" href="#">Notifcations</a></p>
+            <p><a target="blank" href="#">Users</a></p>
+            <p><a target="blank" href="#">Services</a></p>
+        </div>
+        <!--footer_container3 close-->
+		<!--sign up from-->
+        <div class="signupfrom">
+            <div class="signuptext">
+                <h3>Log In Here </h3></div>
+            <div class="inputfiled">
+                <input type="text" placeholder="Enter Username" />
+            </div>
+            <div class="inputfiled">
+                <input type="email" placeholder="Enter Email" />
+            </div>
+            <div class="inputfiled">
+                <input type="password" placeholder="Enter Password" />
+            </div>
+            <div class="inputfiled1">
+                <input type="Submit" Value="Log In" />
+            </div>
+        </div>
+		<!--sign up from close-->
+    </footer>
+<!--footer_content close-->
+</body>
+</html>

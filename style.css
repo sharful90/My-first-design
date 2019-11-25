@@ -1,0 +1,457 @@
+*{
+     margin:0;
+     padding:0;
+}
+ @font-face{
+     font-family:masumfont;
+     src:url(font/Paprika-Regular.woff);
+}
+/*header content*/
+ .main_nav{
+     background:#ddd;
+     width: 100%;
+     display: table;
+     border: 1px solid #c2c2c2;
+}
+ .primary_menu{
+     display: inline-block;
+     float: right;
+     position:relative;
+	 z-index:1;
+}
+ .primary_menu li{
+     font-family: lato black;
+     list-style:none;
+     display: inline-block;
+     padding: 10px;
+}
+ .primary_menu li a{
+     text-decoration:none;
+     color:#000000ba;
+     border-radius: 2px;
+     font-size: 16px;
+     padding: 7px 5px 7px 5px;
+}
+ .logo_image{
+     float: left;
+}
+.logo_image img {
+    width: 378px;
+    padding-left: 5px;
+    padding-top: 4px;
+}
+ .primary_menu li a:hover{
+     background:#5D6D7E;
+     color:white;
+     transition:0.5s;
+     top:0px;
+}
+ #login_button {
+     background:#3bbaeb;
+     color: white;
+}
+ #signup_button{
+     Background:green;
+     color:white;
+}
+ .sub_menu{
+     width: 255px;
+     position: absolute;
+     top: 39px;
+     display: grid;
+     transform: scaley(0);
+     transform-origin: top;
+     background:#dddddded;
+}
+.sub_menu li a{font-size:12px;}
+ .sub_menu li:hover{
+     transform:translate(13px);
+     transition:0.5s;
+}
+ .primary_menu li:hover .sub_menu{
+     transform: scaley(1);
+     transition:0.5s;
+}
+ .sub_menu li a:hover{
+     background:white;
+     color:black;
+     transition:0.5s;
+}
+/*header content close*/
+/*section content*/
+ #service_section{
+     background-image:url("img/masum.jpg");
+     background-repeat:no-repeat;
+     background-size:cover;
+     width:100%;
+     height: 625px;
+     overflow: hidden;
+}
+ #about_section{
+     background-image:url("img/download.jfif");
+     background-repeat:no-repeat;
+     background-size:cover;
+     width:100%;
+     height:530px;
+     overflow: hidden;
+}
+ .left_image img {
+    width: 300px;
+    margin-left: 45px;
+    box-shadow: -2px 14px 41px -6px black;
+    float: left;
+    margin-top: 52px;
+    border-radius: 8px;
+}
+ .about_content {
+    width: 722px;
+    float: right;
+    margin-right: 65px;
+    margin-top: 39px;
+    font-size: 16px;
+    font-family: arial;
+    line-height: 40px;
+    color: #191612;
+    overflow: hidden;
+}
+ #hading1{
+     text-shadow: -2px 2px 0px black;
+	 font-size: 40px;
+}
+ #span_tag1{
+     color:white;
+}
+ #span_tag2{
+     color:orange;
+}
+ #span_tag3{
+     color:white;
+}
+ #span_tag4{
+     color:#a4d348;
+}
+ .section_title1 {
+     text-align: center;
+     font-family: arial black;
+     font-size: 25px;
+     margin-bottom: 25px;
+     animation-name:textstyle;
+     animation-duration:1s;
+}
+ .section_title2 {
+     text-align: center;
+     font-family: arial black;
+     font-size: 25px;
+     margin-bottom: 25px;
+     animation-name:textstyle;
+     animation-duration:1s;
+}
+ .all_content{
+     margin-left: 97px;
+     padding-bottom: 166px;
+     font-family:arial;
+     padding-top: 30px;
+}
+ .main_block {
+     width:300px;
+     background: #ddd;
+     padding: 10px;
+     overflow:hidden;
+     float: left; 
+     display: inline-block;
+     box-shadow: -2px 6px 7px -3px black;
+     animation-name:blogstyle;
+     animation-duration:1s;
+     padding-top: 15px;
+     padding-bottom: 15px;
+	 
+}
+#main_block{
+    border: 5px solid #979797;
+    display: grid;
+    float: left;
+    overflow: hidden;
+    margin-left: 30px;
+	box-shadow:0px 4px 10px 0px;
+}
+ .lefticon{
+     float:left;
+     font-size:40px;
+     padding-top: 23px;
+     color:red;
+}
+ .rightcontent{
+     float:right;
+     width: 230px;
+}
+ .rightcontent h3{
+     padding-bottom: 10px;
+     font-family:arial black;
+}
+ .rightcontent p{
+     font-size:14px;
+}
+ @keyframes blogstyle{
+     from{
+         transform:scale(0);
+    }
+     to{
+         transform:scale(1);
+    }
+}
+ @keyframes textstyle{
+     from{
+         transform:rotate(0deg);
+    }
+     to{
+         transform:rotate(360deg);
+    }
+}
+ .main_block:hover{
+     transform:scale(0.9);
+     transition:1s;
+     background:white;
+}
+ .section_title1:hover{
+     transform:rotatey(360deg);
+     transition:2s;
+}
+ .section_title2:hover{
+     transform:rotatex(360deg);
+     transition:2s;
+}
+ .about_content:hover{
+    color:darkblue;
+}
+/*section content close*/
+/*My Skills Animation*/
+.background{background:#00000029;
+           height:500px;
+		   overflow:hidden;
+		   
+}
+.my_skills{
+	width:100%;
+	height:500px;
+	background-image:url("img/masumimage.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	overflow:hidden;
+
+}
+.Skills{
+	width:100%;
+	max-width: 700px;
+	margin:60px auto;
+	font-family:arial;	
+}
+.Skills h2{
+	margin-bottom:20px;
+	font-size: 28px;
+	font-family:arial black;
+	color: #F44336;
+	text-shadow: -1px 1px 1px black;
+}
+#right{
+    float: right;
+    margin-top: -6px;
+    margin-left: 7px;
+}
+.Skills li{
+    list-style:none;
+    margin-bottom: 17px;
+}
+.bar{
+    background: #e9e9e9;
+    border: 1px solid #795548;
+    display:block;
+    height: 5px;
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow: 0px 1px 0px #795548;
+}
+.bar span{
+	height: 7px;
+	float:left;
+	background: #e51010;
+}
+.html{width:95%;
+    animation:html 2s;
+}
+.css{width:85%;
+    animation:css 2s;
+}
+.javascript{width:70%;
+    animation:javascript 2s;
+}
+.jquery{width:75%;
+    animation:jquery 2s;
+}
+.bootstrap{width:80%;
+    animation:bootstrap 2s;
+}
+.php{width:85%;
+    animation:php 2s;
+}
+.wordpress{width:95%;
+    animation:wordpress 2s;
+}
+
+
+@keyframes html{
+	from{width:0%;}
+	to{width:95%;}
+	
+}
+@keyframes css{
+	from{width:0%;}
+	to{width:85%;}
+	
+}@keyframes javascript{
+	from{width:0%;}
+	to{width:70%;}
+	
+}@keyframes jquery{
+	from{width:0%;}
+	to{width:75%;}
+	
+}@keyframes bootstrap{
+	from{width:0%;}
+	to{width:80%;}
+	
+}@keyframes php{
+	from{width:0%;}
+	to{width:85%;}
+	
+}@keyframes wordpress{
+	from{width:0%;}
+	to{width:95%;}
+	
+}
+/*My Skills Animation close*/
+
+/*footer_content*/
+footer#footer_content {
+    background: #5b5b5b;
+    color: white;
+    padding: 30px 30px 15px 30px;
+    overflow: hidden;
+    width: 100%;
+}
+ .footer_container{
+     width: 238px;
+     line-height: 20px;
+     float:left;
+     margin-left: 60px;
+}
+ .footer_container h2{
+     border-bottom: 1px solid #ff9800;
+     padding-bottom: 13px;
+     margin-bottom: 11px;
+     font-size: 21px;
+     font-family: arial black;
+}
+ .footer_container p{
+    font-family: arial;
+    font-size: 15px;
+    line-height: 22px;
+}
+ .footer_container h2:hover{
+    color:#ff9800;
+}
+ .footer_container p:hover{
+    color:#ff9800
+}
+
+
+ .footer_container2{
+     width: 200px;
+     line-height: 20px;
+     float:left;
+     margin-left: 60px;
+}
+ .footer_container2 h2 {
+     border-bottom: 1px solid #3bbaeb;
+     padding-bottom: 13px;
+     margin-bottom: 5px;
+     font-size: 20px;
+     font-family: arial black;
+}
+ .footer_container2 p a{
+    font-family: arial;
+    color: white;
+    line-height: 34px;
+    font-size: 15px;
+}
+ .footer_container2 h2:hover{
+    color:#3bbaeb;
+}
+ .footer_container2 p a:hover{
+    color:#3bbaeb;
+}
+
+
+ .footer_container3{
+     width: 176px;
+     line-height: 20px;
+     float:left;
+     margin-left: 60px;
+}
+ .footer_container3 h2 {
+     border-bottom: 1px solid #8bc34a;
+     padding-bottom: 13px;
+     margin-bottom: 5px;
+     font-size: 20px;
+     font-family: arial black;
+}
+ .footer_container3 p a{
+    font-family: arial;
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+}
+ .footer_container3 h2:hover{
+    color:#8bc34a;
+}
+ .footer_container3 p a:hover{
+    color:#8bc34a;
+}
+
+/*signup_from*/
+ .signupfrom{
+     width: 236px;
+     padding: 10px;
+     margin: auto;
+     opacity: 1;
+     float:right;
+     margin-right: 40px;
+}
+ .signuptext {
+     background:#4daab4b8;
+     padding: 5px;
+     margin-bottom: 10px;
+}
+ .signuptext h3{
+    text-align:center;
+    font-family: arial;
+    font-size: 22px;
+    color: white;
+}
+ .inputfiled input {
+     width: 98%;
+     margin-bottom: 9px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+}
+ .inputfiled1 input {
+     width: 31%;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     background:#4daab4b8;
+     color: white;
+     font-family: arial;
+     border: 1px solid #4daab4b8;
+}
+/*signup_from close*/
+/*footer_content close*/
+ 
